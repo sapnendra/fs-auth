@@ -16,8 +16,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Auth System",
-  description: "Full-stack authentication system",
+  title: {
+    default: "AuthSystem",
+    template: "%s — AuthSystem",
+  },
+  description: "Full-stack authentication system with JWT, email verification, and protected routes.",
+  icons: {
+    icon: "/icon",
+  },
 };
 
 export default function RootLayout({

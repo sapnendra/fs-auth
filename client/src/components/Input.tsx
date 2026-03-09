@@ -23,7 +23,7 @@ export default function Input({ label, error, className = "", id, type, ...props
         <input
           id={id}
           type={resolvedType}
-          className={`w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 text-sm placeholder-gray-400
+          className={`w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 text-sm placeholder-gray-400
             focus:outline-none focus:ring-2 focus:ring-[#E96326] focus:border-transparent
             transition-all duration-200 shadow-sm
             ${isPassword ? "pr-12" : ""}

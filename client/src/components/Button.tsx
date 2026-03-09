@@ -15,13 +15,13 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed";
+    "inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed";
 
   const variants = {
     primary:
       "bg-[#E96326] text-white hover:opacity-90 focus:ring-[#E96326] shadow-md hover:shadow-lg",
     outline:
-      "border-2 border-[#E96326] text-[#E96326] hover:bg-[#E96326] hover:text-white focus:ring-[#E96326]",
+      "border-2 border-[#E96326] text-[#E96326] hover:bg-[#E96326] hover:text-white focus:ring-[#E96326] rounded-lg",
   };
 
   return (
