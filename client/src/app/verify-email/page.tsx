@@ -43,7 +43,7 @@ function VerifyEmailContent() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-8 sm:py-12">
       <div className="w-full max-w-md">
         <div className="text-center mb-6 sm:mb-8">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-[#E96326] mb-4">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary mb-4">
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -56,7 +56,7 @@ function VerifyEmailContent() {
           <div className="text-center py-4">
             {status === "loading" && (
               <div className="flex flex-col items-center gap-4">
-                <svg className="animate-spin h-10 w-10 text-[#E96326]" viewBox="0 0 24 24" fill="none">
+                <svg className="animate-spin h-10 w-10 text-primary" viewBox="0 0 24 24" fill="none">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                   <path className="opacity-75" fill="currentColor"
                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />

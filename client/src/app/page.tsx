@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AuthSystem — Secure Authentication",
+  title: "AuthSystem - Secure Authentication",
   description:
     "A full-stack authentication system with JWT tokens, email verification, and protected routes.",
 };
@@ -80,7 +80,7 @@ export default function HomePage() {
       <nav className="flex-none border-b border-gray-100 bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-[#E96326] flex items-center justify-center shadow-sm">
+            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shadow-sm">
               <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
@@ -90,13 +90,13 @@ export default function HomePage() {
           <div className="flex items-center gap-3">
             <Link
               href="/login"
-              className="text-sm font-medium text-gray-600 hover:text-[#E96326] transition-colors px-3 py-1.5"
+              className="text-sm font-medium text-gray-600 hover:text-primary transition-colors px-3 py-1.5"
             >
               Sign in
             </Link>
             <Link
               href="/register"
-              className="text-sm font-semibold bg-[#E96326] text-white px-4 py-2 rounded-md hover:opacity-90 transition-opacity shadow-sm"
+              className="text-sm font-semibold bg-primary text-white px-4 py-2 rounded-md hover:opacity-90 transition-opacity shadow-sm"
             >
               Get Started
             </Link>
@@ -104,28 +104,23 @@ export default function HomePage() {
         </div>
       </nav>
 
-      {/* ── Render Delay Banner ── */}
-      <div className="flex-none bg-amber-400 border-b-2 border-amber-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-center gap-2.5">
-          <svg className="w-4 h-4 text-amber-900 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
-          </svg>
-          <p className="text-amber-900 text-xs sm:text-sm font-semibold text-center">
-            <span className="font-bold">Heads up:</span> The backend server is hosted on a free tier and may take{" "}
-            <span className="underline underline-offset-2 decoration-2">40+ seconds</span> to wake up on first request. Please be patient.
-          </p>
-        </div>
+      {/* ── Render Delay Banner (floating capsule) ── */}
+      <div className="fixed bottom-6 md:top-[10%] left-1/2 -translate-x-1/2 z-50 flex items-center gap-2.5 bg-amber-50 border border-red-400 text-red-500 px-4 py-2 rounded-full shadow-lg whitespace-nowrap animate-pulse">
+        <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse shrink-0" />
+        <span className="text-xs font-semibold">
+          Backend may take <strong>40+ sec</strong> to wake up on first visit
+        </span>
       </div>
 
       {/* ── Main ── */}
       <main className="flex-1 overflow-hidden">
         <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-10 lg:gap-20 py-8 md:py-0">
 
-          {/* Left — Text */}
+          {/* Left - Text */}
           <div className="flex-none w-full md:w-1/2 flex flex-col justify-center">
             {/* Badge */}
-            <div className="inline-flex items-center self-start gap-2 bg-orange-50 text-[#E96326] text-xs font-semibold px-3 py-1.5 rounded-full mb-5 border border-orange-100">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E96326]" />
+            <div className="inline-flex items-center self-start gap-2 bg-orange-50 text-primary text-xs font-semibold px-3 py-1.5 rounded-full mb-5 border border-orange-100">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
               Secure · Fast · Production Ready
             </div>
 
@@ -133,20 +128,20 @@ export default function HomePage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
               Authentication
               <br />
-              <span className="text-[#E96326]">done right.</span>
+              <span className="text-primary">done right.</span>
             </h1>
 
             {/* Sub */}
             <p className="text-gray-500 text-sm sm:text-base lg:text-lg max-w-md leading-relaxed mb-8">
               A full-stack auth system with JWT tokens, email verification, and
-              protected routes — built with Next.js and Express.
+              protected routes - built with Next.js and Express.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/register"
-              className="inline-flex items-center gap-2 bg-[#E96326] text-white font-semibold px-6 py-3 rounded-md hover:opacity-90 transition-opacity shadow-md text-sm"
+              className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-md hover:opacity-90 transition-opacity shadow-md text-sm"
             >
                 Create Account
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -155,31 +150,31 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/login"
-                className="inline-flex items-center gap-2 border-2 border-gray-200 text-gray-700 font-semibold px-6 py-3 rounded-md hover:border-[#E96326] hover:text-[#E96326] transition-colors text-sm"
+                className="inline-flex items-center gap-2 border-2 border-gray-200 text-gray-700 font-semibold px-6 py-3 rounded-md hover:border-primary hover:text-primary transition-colors text-sm"
               >
                 Sign In
               </Link>
             </div>
 
-            {/* Feature chips — mobile only */}
+            {/* Feature chips - mobile only */}
             <div className="flex flex-wrap gap-2 mt-6 md:hidden">
               {features.map((f) => (
                 <span
                   key={f.label}
                   className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm"
                 >
-                  <span className="text-[#E96326]">{f.icon}</span>
+                  <span className="text-primary">{f.icon}</span>
                   {f.label}
                 </span>
               ))}
             </div>
           </div>
 
-          {/* Right — Flow Cards */}
+          {/* Right - Flow Cards */}
           <div className="hidden md:flex flex-none w-1/2 flex-col justify-center gap-3 relative">
             {/* Decorative blob */}
-            <div className="absolute -top-10 -right-10 w-48 h-48 bg-[#E96326] opacity-5 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-10 -left-10 w-36 h-36 bg-[#E96326] opacity-5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -top-10 -right-10 w-48 h-48 bg-primary opacity-5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-10 -left-10 w-36 h-36 bg-primary opacity-5 rounded-full blur-3xl pointer-events-none" />
 
             {steps.map((item) => (
               <div
@@ -188,7 +183,7 @@ export default function HomePage() {
               >
                 <div
                   className={`flex-none w-10 h-10 rounded-lg flex items-center justify-center ${
-                    item.active ? "bg-[#E96326]" : "bg-gray-100"
+                    item.active ? "bg-primary" : "bg-gray-100"
                   }`}
                 >
                   <svg
@@ -218,7 +213,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-center gap-8 lg:gap-12">
           {features.map((f) => (
             <div key={f.label} className="flex items-center gap-2 text-gray-400 text-xs font-medium">
-              <span className="text-[#E96326]">{f.icon}</span>
+              <span className="text-primary">{f.icon}</span>
               {f.label}
             </div>
           ))}

@@ -19,9 +19,9 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-[#E96326] text-white hover:opacity-90 focus:ring-[#E96326] shadow-md hover:shadow-lg",
+      "bg-primary text-white hover:opacity-90 focus:ring-primary shadow-md hover:shadow-lg",
     outline:
-      "border-2 border-[#E96326] text-[#E96326] hover:bg-[#E96326] hover:text-white focus:ring-[#E96326] rounded-lg",
+      "border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary rounded-lg",
   };
 
   return (

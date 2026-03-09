@@ -46,7 +46,7 @@ export default function ProfilePage() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="flex flex-col items-center gap-4">
-          <svg className="animate-spin h-10 w-10 text-[#E96326]" viewBox="0 0 24 24" fill="none">
+          <svg className="animate-spin h-10 w-10 text-primary" viewBox="0 0 24 24" fill="none">
             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
           </svg>
@@ -101,8 +101,8 @@ export default function ProfilePage() {
         <Card>
           <div className="flex flex-col xs:flex-row items-start gap-4 sm:gap-6">
             {/* Avatar */}
-            <div className="flex-shrink-0">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-[#E96326] to-[#f07840] flex items-center justify-center shadow-lg">
+            <div className="shrink-0">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-linear-to-br from-primary to-primary/70 flex items-center justify-center shadow-lg">
                 <span className="text-white text-xl sm:text-2xl font-bold">
                   {data?.name?.charAt(0).toUpperCase()}
                 </span>
@@ -134,7 +134,7 @@ export default function ProfilePage() {
                 <p className="text-gray-900 font-medium mt-0.5">{data?.name}</p>
               </div>
               <div className="w-8 h-8 bg-orange-50 rounded-lg flex items-center justify-center">
-                <svg className="w-4 h-4 text-[#E96326]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
@@ -146,7 +146,7 @@ export default function ProfilePage() {
                 <p className="text-gray-900 font-medium mt-0.5">{data?.email}</p>
               </div>
               <div className="w-8 h-8 bg-orange-50 rounded-lg flex items-center justify-center">
-                <svg className="w-4 h-4 text-[#E96326]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>

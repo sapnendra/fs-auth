@@ -1,4 +1,4 @@
-# API Documentation — Auth System
+# API Documentation - Auth System
 
 Base URL: `http://localhost:5000`
 
@@ -7,7 +7,7 @@ All responses are `application/json`.
 
 ---
 
-## Auth Routes — `/api/auth`
+## Auth Routes - `/api/auth`
 
 ---
 
@@ -31,7 +31,7 @@ Register a new user. Sends a verification email with a JWT token link.
 | `email`    | String | Yes      | Valid email format      |
 | `password` | String | Yes      | Any non-empty string    |
 
-#### Success Response — `201 Created`
+#### Success Response - `201 Created`
 
 ```json
 {
@@ -66,7 +66,7 @@ Verifies user's email using the JWT token from the email link.
 GET /api/auth/verify/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 
-#### Success Response — `200 OK`
+#### Success Response - `200 OK`
 
 ```json
 {
@@ -111,7 +111,7 @@ Login with email and password. Returns a JWT token on success.
 | `email`    | String | Yes      |
 | `password` | String | Yes      |
 
-#### Success Response — `200 OK`
+#### Success Response - `200 OK`
 
 ```json
 {
@@ -144,7 +144,7 @@ Token expires in **7 days**.
 
 ---
 
-## Profile Routes — `/api`
+## Profile Routes - `/api`
 
 All profile routes require authentication via JWT in the `Authorization` header.
 
@@ -168,7 +168,7 @@ Returns the logged-in user's profile data.
 |-----------------|---------------------------|----------|
 | `Authorization` | `Bearer <jwt_token>`      | Yes      |
 
-#### Success Response — `200 OK`
+#### Success Response - `200 OK`
 
 ```json
 {
@@ -189,7 +189,7 @@ Returns the logged-in user's profile data.
 
 ---
 
-## Authentication Middleware — `authMiddleware`
+## Authentication Middleware - `authMiddleware`
 
 Applied to all protected routes. Reads the `Authorization` header, verifies the JWT, and attaches `req.userId` and `req.email` to the request object.
 
@@ -234,12 +234,12 @@ Applied to all protected routes. Reads the `Authorization` header, verifies the 
 
 ## Changelog
 
-### v1.0.0 — Initial Release
+### v1.0.0 - Initial Release
 
-- `POST /api/auth/register` — User registration with email verification
-- `GET /api/auth/verify/:token` — Email verification via JWT token
-- `POST /api/auth/login` — Login with email/password, returns JWT
-- `GET /api/profile` — Protected profile endpoint using `authMiddleware`
+- `POST /api/auth/register` - User registration with email verification
+- `GET /api/auth/verify/:token` - Email verification via JWT token
+- `POST /api/auth/login` - Login with email/password, returns JWT
+- `GET /api/profile` - Protected profile endpoint using `authMiddleware`
 - MongoDB `User` model with bcrypt password hashing
 - Nodemailer integration for verification emails
 - `503` error response when MongoDB is not connected

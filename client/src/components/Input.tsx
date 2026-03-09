@@ -24,7 +24,7 @@ export default function Input({ label, error, className = "", id, type, ...props
           id={id}
           type={resolvedType}
           className={`w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 text-sm placeholder-gray-400
-            focus:outline-none focus:ring-2 focus:ring-[#E96326] focus:border-transparent
+            focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
             transition-all duration-200 shadow-sm
             ${isPassword ? "pr-12" : ""}
             ${error ? "border-red-400 focus:ring-red-400" : ""}
@@ -35,7 +35,7 @@ export default function Input({ label, error, className = "", id, type, ...props
           <button
             type="button"
             onClick={() => setShowPassword((prev) => !prev)}
-            className="absolute inset-y-0 right-0 flex items-center px-3.5 text-gray-400 hover:text-[#E96326] transition-colors"
+            className="absolute inset-y-0 right-0 flex items-center px-3.5 text-gray-400 hover:text-primary transition-colors"
             tabIndex={-1}
             aria-label={showPassword ? "Hide password" : "Show password"}
           >

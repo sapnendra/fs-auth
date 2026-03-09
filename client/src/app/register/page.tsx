@@ -58,14 +58,14 @@ export default function RegisterPage() {
       <div className="w-full max-w-md">
         {/* Logo / Brand */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-[#E96326] mb-4">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary mb-4">
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
           </div>
           <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Create an account</h1>
-          <p className="text-gray-500 text-sm mt-1">Join us today — it&apos;s free</p>
+          <p className="text-gray-500 text-sm mt-1">Join us today - it&apos;s free</p>
         </div>
 
         <Card>
@@ -78,7 +78,7 @@ export default function RegisterPage() {
               </div>
               <h2 className="text-lg font-semibold text-gray-900 mb-2">Check your inbox</h2>
               <p className="text-gray-600 text-sm">{successMessage}</p>
-              <Link href="/login" className="mt-4 inline-block text-[#E96326] font-medium text-sm hover:underline">
+              <Link href="/login" className="mt-4 inline-block text-primary font-medium text-sm hover:underline">
                 Go to Login →
               </Link>
             </div>
@@ -131,7 +131,7 @@ export default function RegisterPage() {
 
         <p className="text-center text-gray-500 text-sm mt-6">
           Already have an account?{" "}
-          <Link href="/login" className="text-[#E96326] font-medium hover:underline">
+          <Link href="/login" className="text-primary font-medium hover:underline">
             Sign in
           </Link>
         </p>
