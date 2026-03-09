@@ -105,7 +105,7 @@ export default function HomePage() {
       </nav>
 
       {/* ── Render Delay Banner (floating capsule) ── */}
-      <div className="fixed bottom-6 md:top-[10%] left-1/2 -translate-x-1/2 z-50 flex items-center gap-2.5 bg-amber-50 border border-red-400 text-red-500 px-4 py-2 rounded-full shadow-lg whitespace-nowrap animate-pulse">
+      <div className="fixed md:top-[10%] top-[90%] left-1/2 -translate-x-1/2 z-50 flex items-center gap-2.5 bg-amber-50 border border-red-400 text-red-500 px-4 py-2 rounded-full shadow-lg whitespace-nowrap animate-pulse">
         <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse shrink-0" />
         <span className="text-xs font-semibold">
           Backend may take <strong>40+ sec</strong> to wake up on first visit
