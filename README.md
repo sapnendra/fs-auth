@@ -1,4 +1,4 @@
-# Full-Stack Authentication System
+# Authentication & Authorization(Next.js, Express.js, MongoDB)
 
 A production-ready, full-stack authentication system featuring **JWT-based auth**, **email verification**, and a polished, responsive UI.
 
