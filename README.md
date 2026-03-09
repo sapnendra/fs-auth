@@ -2,8 +2,6 @@
 
 A production-ready, full-stack authentication system featuring **JWT-based auth**, **email verification**, and a polished, responsive UI.
 
-**Live Demo →** [fs-auth.sapnendra.tech](https://fs-auth.sapnendra.tech)
-
 ---
 
 ## Tech Stack
@@ -185,13 +183,6 @@ Client runs at `http://localhost:3000`
 
 ## Deployment
 
-| Service | URL |
-|---------|-----|
-| Frontend (Vercel) | https://fs-auth.sapnendra.tech |
-| Backend (Render) | https://fs-auth.onrender.com |
-
-> **Note:** The backend is on Render's free tier and spins down after inactivity. The first request may take **40+ seconds** to respond — this is expected.
-
 ### Environment variables in production
 
 **Server (Render):**
@@ -203,13 +194,13 @@ Client runs at `http://localhost:3000`
 | `JWT_SECRET` | A secure random string |
 | `EMAIL_USER` | Your Gmail address |
 | `EMAIL_PASS` | Your Gmail App Password |
-| `CLIENT_URL` | `https://fs-auth.sapnendra.tech` |
+| `CLIENT_URL` | `http://localhost:3000` |
 
 **Client (Vercel):**
 
 | Key | Value |
 |-----|-------|
-| `NEXT_PUBLIC_API_URL` | `https://fs-auth.onrender.com` |
+| `NEXT_PUBLIC_API_URL` | `http://localhost:5000` |
 
 ---
 

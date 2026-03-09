@@ -12,7 +12,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://fs-auth.sapnendra.tech",
+  "https://domain.com", // Replace with your actual frontend domain
   process.env.CLIENT_URL,
 ].filter(Boolean);
 
