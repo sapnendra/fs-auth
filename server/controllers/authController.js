@@ -32,10 +32,15 @@ const register = async (req, res) => {
       { expiresIn: "1d" }
     );
 
-    await sendVerificationEmail(email, verificationToken);
+    // Respond immediately — do NOT await email so a slow/failing SMTP
+    // connection never blocks the registration response.
+    sendVerificationEmail(email, verificationToken).catch((emailErr) => {
+      console.error("Verification email failed to send:", emailErr.message);
+    });
 
     return res.status(201).json({
-      message: "Verification email sent. Please verify your email.",
+      message:
+        "Registration successful! A verification email is on its way — check your inbox (and spam folder).",
     });
   } catch (err) {
     console.error("Register error:", err);
